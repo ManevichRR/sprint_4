@@ -13,7 +13,7 @@ public class ImportantQuestionPage {
     // Верхняя кнопка заказать, xPath локатор
     private final String locatorButtonOrderUP = ".//button[@class='Button_Button__ra12g']";
     //Нижняя кнопка заказать, xPath локатор
-    private final String locatorButtonOrderDown = ".//div[@class='Home_FinishButton__1_cWm']/button";
+    private final String locatorButtonOrderDOWN = ".//div[@class='Home_FinishButton__1_cWm']/button";
 
     public ImportantQuestionPage(WebDriver driver) {
         this.driver = driver;
@@ -57,9 +57,9 @@ public class ImportantQuestionPage {
             driver.findElement(By.xpath(locatorButtonOrderUP)).click();
         } else {
             // Скролл до элемента
-            WebElement element = driver.findElement(By.xpath(locatorButtonOrderDown));
+            WebElement element = driver.findElement(By.xpath(locatorButtonOrderDOWN));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-            driver.findElement(By.xpath(locatorButtonOrderDown)).click();
+            driver.findElement(By.xpath(locatorButtonOrderDOWN)).click();
         }
     }
 }

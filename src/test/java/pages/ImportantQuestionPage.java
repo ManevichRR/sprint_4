@@ -42,7 +42,7 @@ public class ImportantQuestionPage {
         return element.getText();
     }
 
-    // Получить текст из выпавшей панели (после клика по строке в "Вопросы о важном)
+    // Получить текст после клика по строке в Вопросы о важном
     public String getTextAccordeonPanel(String locatorAccordeonPanel) {
         // Явное ожидание видимости элемента
         new WebDriverWait(driver, 3)
